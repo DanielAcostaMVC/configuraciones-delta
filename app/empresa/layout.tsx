@@ -13,7 +13,9 @@ import {
 //  SkeletonEmpresa,
 } from '../ui/empresa';
 
-
+import { ThemeProvider } from '@mui/material/styles';
+import { SincoTheme, PageHeader } from '@sinco/react';
+//import { PageHeader } from '@sinco/react';
 
 import {
   BoxCustomView, 
@@ -26,9 +28,9 @@ const { BoxCustomScroll } = BoxEstilos();
 
 export default function LayoutEmpresa  ({ children }: { children: React.ReactNode })  {
   return (
-    <>
+    <ThemeProvider theme={SincoTheme}>
       <BoxCustomView>
-      {/* <PageHeader title="Configuración de la Empresa" />*/}
+      <PageHeader title="Configuración de la Empresa" />
       
 
       <Container maxWidth="md">
@@ -62,6 +64,6 @@ export default function LayoutEmpresa  ({ children }: { children: React.ReactNod
 
       {/*isActiveFooter && <FooterActions />*/}
     </BoxCustomView>
-    </>
+    </ThemeProvider>
   );
 };

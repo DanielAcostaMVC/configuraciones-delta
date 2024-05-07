@@ -3,7 +3,7 @@ import { FC, useContext, useEffect } from 'react';
 
 //import { FormRepresentanteLegal, ViewRepresentanteLegal } from '.';
 
-import { FormRepresentanteLegal } from './representante-legal/form';
+import { FormRepresentanteLegal, ViewRepresentanteLegal } from './representante-legal/index';
 
 import { CardCustom } from '../card-custom';
 
@@ -25,11 +25,12 @@ export const CardRepresentanteLegal: FC<CardRepresentanteLegalProps> = ({
   Representante: RepresentanteLegal,
 }) => {
   //const { closeFooter, setUnsavedChanges } = useContext(UIContext);
+  const isEdit = true;//useRepresentanteLegalStore((state) => state.isEdit);
 /*
   const setRepresentanteLegal = useRepresentanteLegalStore(
     (state) => state.setRepresentanteLegal
   );
-  const isEdit = useRepresentanteLegalStore((state) => state.isEdit);
+  
 
   const setOpenEdit = useRepresentanteLegalStore((state) => state.setOpenEdit);
   const setCloseEdit = useRepresentanteLegalStore(
@@ -45,6 +46,7 @@ export const CardRepresentanteLegal: FC<CardRepresentanteLegalProps> = ({
   }, [RepresentanteLegal]);
 */
   const handleOpenCloseForm = () => {
+    console.log("Redirigir a la página de edición de datos del representante legal");
    /* if (isEdit) {
       setCloseEdit();
       closeFooter();
@@ -58,15 +60,15 @@ export const CardRepresentanteLegal: FC<CardRepresentanteLegalProps> = ({
     <CardCustom
       title="Datos del Representante Legal"
       handleChange={handleOpenCloseForm}
-      isEdit={true/*isEdit*/}
+      isEdit={isEdit}
       isAction={true/*isEdit && camposModificados.size > 0 ? false : true*/}
     >
-        <FormRepresentanteLegal RepresentanteLegal={RepresentanteLegal} />
-      {/*isEdit ? (
+        
+      {isEdit ? (
         <FormRepresentanteLegal RepresentanteLegal={RepresentanteLegal} />
       ) : (
         <ViewRepresentanteLegal />
-      )*/}
+      )}
     </CardCustom>
   );
 };
