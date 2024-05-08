@@ -98,7 +98,8 @@ export const UploadFirma: FC<UploadFirmaProps> = ({
 
     const { files } = event.dataTransfer;
     if (files.length > 0) {
-      const file = [...files];
+      //const file = [...files];
+      const file = Array.isArray(files) ? [...files] : [];
       const extensionFile = getFileExtension(file[0]);
 
       if (!extensionFile) {
