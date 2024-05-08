@@ -72,7 +72,7 @@ export default async function PageEditRepresentanteLegal() {
     >
         
       
-        <FormRepresentanteLegal RepresentanteLegal={RepresentanteLegal} />
+        <FormRepresentanteLegal />
       
     </CardCustom>
   );
