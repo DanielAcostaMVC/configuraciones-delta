@@ -19,7 +19,7 @@ import {
 } from '../../../lib/tipos-archivos';
 import useNotification from '../../hooks/use-notification';
 import { Firma } from '../../../lib/empresa/definitions';
-import { FileType } from '../../../lib/definitions'
+//import { FileType } from '../../../lib/definitions'
 import { UploadFirmaEstilos } from '../../../ui/upload-firma-custom.style';
 
 interface TabPanelProps {

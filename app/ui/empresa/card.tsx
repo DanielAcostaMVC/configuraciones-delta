@@ -7,7 +7,7 @@ import { FormRepresentanteLegal, ViewRepresentanteLegal } from './representante-
 
 import { CardCustom } from '../card-custom';
 
-//import { UIContext } from '../../../context/ui';
+import { UIContext } from '../../context/ui/index';
 
 import { RepresentanteLegal } from '../../lib/empresa/definitions';
 
@@ -28,7 +28,7 @@ export const CardRepresentanteLegal: FC<CardRepresentanteLegalProps> = ({
   searchParams,
   Representante: RepresentanteLegal, 
 }) => {
-  //const { closeFooter, setUnsavedChanges } = useContext(UIContext);
+  const { closeFooter, setUnsavedChanges } = useContext(UIContext);
   const isEdit = !!searchParams?.isEdit;//useRepresentanteLegalStore((state) => state.isEdit);
   
 /*
@@ -57,13 +57,13 @@ export const CardRepresentanteLegal: FC<CardRepresentanteLegalProps> = ({
     
     console.log("isEditX: ", isEditX);
 
-   /* if (isEdit) {
-      setCloseEdit();
+    if (isEdit) {
+      //setCloseEdit();
       closeFooter();
       setUnsavedChanges(false);
     } else {
-      setOpenEdit();
-    }*/
+      //setOpenEdit();
+    }
   };
 
   return (
