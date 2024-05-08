@@ -26,8 +26,8 @@ export  type TipoDocumento = {
     nombre: string;
   };
   
-  type MessageType = 'success' | 'error' | 'info' | 'warning';
-  type FileType = 'png' | 'jpg' | 'jpeg' | 'pdf';
+  export type MessageType = 'success' | 'error' | 'info' | 'warning';
+  export type FileType = 'png' | 'jpg' | 'jpeg' | 'pdf';
   
   type AccesoPrincipalBasico = {
     cargo: string;

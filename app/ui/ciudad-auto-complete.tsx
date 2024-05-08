@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, FC, useEffect } from 'react';
 import { Autocomplete, TextField, Skeleton } from '@mui/material';
 //import { useCiudades } from './hooks/useCiudades';

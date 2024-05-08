@@ -1,7 +1,7 @@
 'use client';
 
 import { Container, Grid /*, Stack*/ } from '@mui/material';
-
+import Link from 'next/link';
 import {
   Auditoria,
  /* CardFirma,
@@ -40,7 +40,9 @@ export default function LayoutEmpresa  ({ children }: { children: React.ReactNod
           </Grid>
           <Grid container justifyContent="center">
             <Grid item xs={2} sm={2} md={2} lg={2}>
+<Link href="../">
               <LogoEmpresa logo={"/logo-empresa.png"} />
+              </Link>
             </Grid>
             <Grid item xs={10} sm={10} md={10} lg={10}>
               {children}

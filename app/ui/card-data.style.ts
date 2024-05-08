@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardContent, CardHeader, styled } from '@mui/material';
 
 const CardEstilos = () => {

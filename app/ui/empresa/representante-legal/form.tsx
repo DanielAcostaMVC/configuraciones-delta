@@ -1,3 +1,5 @@
+'use client';
+
 import { FC, useContext, useEffect, useState } from 'react';
 //import { useShallow } from 'zustand/react/shallow';
 import { Grid, TextField } from '@mui/material';
@@ -21,9 +23,7 @@ interface FormRepresentanteLegalProps {
   RepresentanteLegal: RepresentanteLegal;
 }
 
-export const FormRepresentanteLegal: FC<FormRepresentanteLegalProps> = ({
-  RepresentanteLegal,
-}) => {
+export const FormRepresentanteLegal = () => {
   //const { openFooter, setIsEnabledBtn } = //useContext(UIContext);
 /*
   const isEditEmpresa = useRepresentanteLegalStore((state) => state.isEdit);
@@ -37,13 +37,13 @@ export const FormRepresentanteLegal: FC<FormRepresentanteLegalProps> = ({
     useShallow((state) => state.representanteLegal)
   );
 */
-  const {
+ /* const {
     NombreCompleto,
     NumeroIdentificacion,
     TipoDocumento,
     LugarExpedicion,
     Firma,
-  } = RepresentanteLegal;
+  } = RepresentanteLegal;*/
 /*
   const { checkFormEmpresa } = useDatosEmpresaStore();
 
@@ -165,9 +165,9 @@ export const FormRepresentanteLegal: FC<FormRepresentanteLegalProps> = ({
     }));
   };
 
-  useEffect(() => {
+ /* useEffect(() => {
     loadDataRepresentante();
-  }, [RepresentanteLegal]);
+  }, [RepresentanteLegal]);*/
 
   useEffect(() => {
     const conError =

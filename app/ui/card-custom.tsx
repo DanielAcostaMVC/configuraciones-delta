@@ -1,7 +1,10 @@
+'use client';
+
 import { FC } from 'react';
 import CardEstilos from './card-data.style';
 import IconsEstilos from './icons.style';
 import ButtonEstilos from './button-custom.style';
+import Link from 'next/link';
 
 interface CardCustomProps {
   title: string;
@@ -28,7 +31,7 @@ export const CardCustom: FC<CardCustomProps> = ({
         action={
           isAction && (
             <IconButtonCustom onClick={handleChange}>
-              {isEdit ? <CloseCustom /> : <EditCustom />}
+              {isEdit ? <Link href="/empresa/view"><CloseCustom /></Link> : <Link href="/empresa/edit"><EditCustom /></Link>}
             </IconButtonCustom>
           )
         }

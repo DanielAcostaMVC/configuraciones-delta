@@ -3,9 +3,9 @@ import { FC, useContext, useEffect } from 'react';
 
 //import { FormRepresentanteLegal, ViewRepresentanteLegal } from '.';
 
-import { FormRepresentanteLegal, ViewRepresentanteLegal } from './representante-legal/index';
+import { FormRepresentanteLegal, ViewRepresentanteLegal } from '../../ui/empresa/representante-legal/index';
 
-import { CardCustom } from '../card-custom';
+import { CardCustom } from '../../ui/card-custom';
 
 //import { UIContext } from '../../../context/ui';
 
@@ -17,19 +17,16 @@ import {
   useCamposModificadosStore,
 } from '../../stores';
 */
-interface CardRepresentanteLegalProps {
+interface PageEditRepresentanteLegal {
   searchParams?: {
     isEdit?: boolean;
   };
   Representante: RepresentanteLegal;
 }
 
-export const CardRepresentanteLegal: FC<CardRepresentanteLegalProps> = ({
-  searchParams,
-  Representante: RepresentanteLegal, 
-}) => {
+export default async function PageEditRepresentanteLegal() {
   //const { closeFooter, setUnsavedChanges } = useContext(UIContext);
-  const isEdit = !!searchParams?.isEdit;//useRepresentanteLegalStore((state) => state.isEdit);
+  //const isEdit = !!searchParams?.isEdit;//useRepresentanteLegalStore((state) => state.isEdit);
   
 /*
   const setRepresentanteLegal = useRepresentanteLegalStore(
@@ -50,12 +47,12 @@ export const CardRepresentanteLegal: FC<CardRepresentanteLegalProps> = ({
     setRepresentanteLegal(RepresentanteLegal);
   }, [RepresentanteLegal]);
 */
-  const handleOpenCloseForm = () => {
-    console.log("Redirigir a la página de edición de datos del representante legal");
+ // const handleOpenCloseForm = () => {
+  //  console.log("Redirigir a la página de edición de datos del representante legal");
 
-    const isEditX = !!searchParams?.isEdit//?true:!searchParams?.isEdit;
+  //  const isEditX = !!searchParams?.isEdit//?true:!searchParams?.isEdit;
     
-    console.log("isEditX: ", isEditX);
+   // console.log("isEditX: ", isEditX);
 
    /* if (isEdit) {
       setCloseEdit();
@@ -64,21 +61,19 @@ export const CardRepresentanteLegal: FC<CardRepresentanteLegalProps> = ({
     } else {
       setOpenEdit();
     }*/
-  };
+//  };
 
   return (
     <CardCustom
       title="Datos del Representante Legal"
-      handleChange={handleOpenCloseForm}
-      isEdit={isEdit}
+     // handleChange={handleOpenCloseForm}
+      isEdit={true}
       isAction={true/*isEdit && camposModificados.size > 0 ? false : true*/}
     >
         
-      {isEdit ? (
-        <FormRepresentanteLegal />
-      ) : (
-        <ViewRepresentanteLegal />
-      )}
+      
+        <FormRepresentanteLegal RepresentanteLegal={RepresentanteLegal} />
+      
     </CardCustom>
   );
 };
