@@ -4,7 +4,7 @@
 import BoxEstilos from '../ui/box-custom.style';
 const { BoxCustomScroll } = BoxEstilos();
 
-import { CardRepresentanteLegal, CardFirma } from '../ui/empresa/index';
+import { CardRepresentanteLegal, CardFirma, DatosEmpresa } from '../ui/empresa/index';
 
 
 import { Stack } from '@mui/material';
@@ -12,20 +12,24 @@ import { Stack } from '@mui/material';
 
 export default async function EmpresaPage() {
 
-const RepresentanteLegal = { NombreCompleto: "a", NumeroIdentificacion: "b", TipoDocumento: {id:"CC", nombre:"Cédula"}, LugarExpedicion: "c", Firma: ""
-}
+const RepresentanteLegal = { NombreCompleto: "a", NumeroIdentificacion: "b", TipoDocumento: {id:"CC", nombre:"Cédula"}, LugarExpedicion: "c", Firma: ""};
+const Direccion = "d";
+const ConstitucionEmpresa = "e";
+const Ciudad = {id: "f", nombre: "g"};
+const Poliza = {Numero: "h", Valor: "i"};  
+
 
     return (
 <BoxCustomScroll>
                 <Stack gap={1.5}>
                   <CardRepresentanteLegal Representante={RepresentanteLegal} />
                   <CardFirma Firma={RepresentanteLegal.Firma} />
-                 {/* <DatosEmpresa
+                  <DatosEmpresa
                     Direccion={Direccion}
                     ConstitucionEmpresa={ConstitucionEmpresa}
                     Ciudad={Ciudad}
                     Poliza={Poliza}
-/>*/}
+/>
                 </Stack>
   </BoxCustomScroll>
  
