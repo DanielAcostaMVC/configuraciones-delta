@@ -1,5 +1,5 @@
 import { FC, useContext, useEffect } from 'react';
-import { /*FormDatosEmpresa,*/ ViewDatosEmpresa } from './datos-empresa/index';
+import { FormDatosEmpresa, ViewDatosEmpresa } from './datos-empresa/index';
 import { CardCustom } from '../card-custom';
 import { UIContext } from '../../context/ui/index';
 import { Poliza } from '../../lib/empresa/definitions';
@@ -73,7 +73,7 @@ const handleOpenCloseForm = () => {
       isAction={true/*isEdit && camposModificados.size > 0 ? false : true*/}
     >
       {isEdit ? (
-        '<FormDatosEmpresa />'
+        <FormDatosEmpresa />
       ) : (
         <ViewDatosEmpresa
         // Direccion={Direccion}

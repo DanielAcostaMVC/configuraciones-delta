@@ -1,9 +1,10 @@
 import { FC, useContext, useEffect } from 'react';
 //import { useShallow } from 'zustand/react/shallow';
-
+import{ Stack } from '@mui/material';
 //import { FormRepresentanteLegal, ViewRepresentanteLegal } from '.';
 
 import { FormRepresentanteLegal, ViewRepresentanteLegal } from '../../ui/empresa/representante-legal/index';
+import { FormDatosEmpresa } from '@/app/ui/empresa/datos-empresa/index';
 
 import { CardCustom } from '../../ui/card-custom';
 
@@ -64,6 +65,7 @@ export default async function PageEditRepresentanteLegal() {
 //  };
 
   return (
+    <Stack gap={1.5}>
     <CardCustom
       title="Datos del Representante Legal"
      // handleChange={handleOpenCloseForm}
@@ -75,5 +77,14 @@ export default async function PageEditRepresentanteLegal() {
         <FormRepresentanteLegal />
       
     </CardCustom>
+    <CardCustom
+    title="Datos de la Empresa"
+    //handleChange={handleOpenCloseForm}
+    isEdit={true}
+    isAction={true/*isEdit && camposModificados.size > 0 ? false : true*/}
+  >
+    <FormDatosEmpresa />
+    </CardCustom>
+    </Stack>
   );
 };
