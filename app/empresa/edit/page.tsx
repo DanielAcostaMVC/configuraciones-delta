@@ -9,6 +9,7 @@ import { FormDatosEmpresa } from '@/app/ui/empresa/datos-empresa/index';
 import { CardCustom } from '../../ui/card-custom';
 
 //import { UIContext } from '../../../context/ui';
+import { CardFirma } from '../../ui/empresa/firma';
 
 import { RepresentanteLegal } from '../../lib/empresa/definitions';
 
@@ -77,6 +78,7 @@ export default async function PageEditRepresentanteLegal() {
         <FormRepresentanteLegal />
       
     </CardCustom>
+    <CardFirma Firma="" />
     <CardCustom
     title="Datos de la Empresa"
     //handleChange={handleOpenCloseForm}
