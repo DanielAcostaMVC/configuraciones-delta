@@ -1,3 +1,5 @@
+'use client';
+
 import { FC, PropsWithChildren, useReducer, useState } from 'react';
 import { uiReducer } from './reducer';
 import { UIContext } from './context';

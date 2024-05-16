@@ -21,27 +21,29 @@ const BoxEstilos = () => {
         flexDirection: 'column',
         alignItems: 'center',
     }));
-    const BoxCustomScroll = styled(Box)<BoxCustomScrollProps>(
-        ({ theme, heightToReduce = 200 }) => ({
-            overflowY: 'auto',
-            maxHeight: `calc(100vh - ${heightToReduce}px)`,
-            '&::-webkit-scrollbar': {
-                width: '8px', // Ancho del scrollbar
-            },
-            '&::-webkit-scrollbar-thumb': {
-                backgroundColor: theme.palette.primary.light, // Color del thumb (parte desplazable)
-                borderRadius: '4px', // Borde del thumb
-            },
-            '&::-webkit-scrollbar-track': {
-                backgroundColor: '#f1f1f1', // Color del track (fondo del scrollbar)
-            },
-        })
-    );
+    
 
     return {
         BoxCustom,
         BoxStepperCustom,
-        BoxCustomScroll,
     };
 };
+
+export const BoxCustomScroll = styled(Box)<BoxCustomScrollProps>(
+    ({ theme, heightToReduce = 200 }) => ({
+        overflowY: 'auto',
+        maxHeight: `calc(100vh - ${heightToReduce}px)`,
+        '&::-webkit-scrollbar': {
+            width: '8px', // Ancho del scrollbar
+        },
+        '&::-webkit-scrollbar-thumb': {
+            backgroundColor: theme.palette.primary.light, // Color del thumb (parte desplazable)
+            borderRadius: '4px', // Borde del thumb
+        },
+        '&::-webkit-scrollbar-track': {
+            backgroundColor: '#f1f1f1', // Color del track (fondo del scrollbar)
+        },
+    })
+);
+
 export default BoxEstilos;

@@ -1,3 +1,5 @@
+'use client';
+
 import { FC, useContext, useEffect } from 'react';
 import { FormDatosEmpresa, ViewDatosEmpresa } from './datos-empresa/index';
 import { CardCustom } from '../card-custom';
