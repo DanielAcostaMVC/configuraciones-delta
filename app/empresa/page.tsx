@@ -32,7 +32,7 @@ const Ciudad = {id: "f", nombre: "g"};
 const Poliza = {Numero: "h", Valor: "i"};  
 
 const isEdit = false;
-const formSection = searchParams?.editSection;
+const formSection = searchParams?.editSection?searchParams?.editSection:'none';
 
 console.log('formSection:', formSection);
 

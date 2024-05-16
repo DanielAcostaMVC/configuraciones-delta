@@ -23,9 +23,9 @@ import {
  /* EmptyStateError,
   EmptyStateSearch,*/
 } from '../ui/box-custom-view';
-import BoxEstilos from '../ui/box-custom.style';
+import {BoxCustomScroll} from '../ui/box-custom.style';
 import { Box, Stack } from '@mui/material';
-const { BoxCustomScroll } = BoxEstilos();
+//const { BoxCustomScroll } = BoxEstilos();
 
 export default function LayoutEmpresa  ({ children }: { children: React.ReactNode })  {
   return (
