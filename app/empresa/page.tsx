@@ -12,6 +12,7 @@ import { CardRepresentanteLegal, CardFirma, DatosEmpresa } from '../ui/empresa/i
 
 
 import { Stack, Typography } from '@mui/material';
+import EditarCerrarTodo from '../ui/editar-cerrar-todo';
 
 //const { CloseCustom, EditCustom } = IconsEstilos();
 //const { IconButtonCustom } = ButtonEstilos();
@@ -41,16 +42,11 @@ console.log('formSection:', formSection);
 <BoxCustomScroll>
                 <Stack gap={1.5}>
                 
-      <Stack direction="row-reverse"> 
-        <IconButtonCustom >
-              {formSection === 'all' ? <CloseCustom /> : <EditCustom />}
-              {/*<Link href="/empresa/view">*<CloseCustom /></Link> : <Link href="/empresa/edit"><EditCustom /></Link>*/}
-        </IconButtonCustom>
-        <Typography variant="h6" color="#2063A0">Editar todo</Typography>
-      </Stack>
+      <EditarCerrarTodo isEdit={searchParams?.editSection==='all'} formSection={formSection} />
                   <CardRepresentanteLegal isEdit={searchParams?.editSection==='all' || searchParams?.editSection==='representante'} Representante={RepresentanteLegal} />
                   <CardFirma Firma={RepresentanteLegal.Firma} />
                   <DatosEmpresa
+                    isEdit={searchParams?.editSection==='all' || searchParams?.editSection==='empresa'}
                     Direccion={Direccion}
                     ConstitucionEmpresa={ConstitucionEmpresa}
                     Ciudad={Ciudad}

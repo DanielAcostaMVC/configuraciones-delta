@@ -63,15 +63,31 @@ export const CardRepresentanteLegal: FC<CardRepresentanteLegalProps> = ({
     console.log(searchParams);
     console.log(pathname);
     console.log(replace);
+
+    
     const params = new URLSearchParams(searchParams);
-    params.set('editSection', 'representante');
+    console.log(['editSection->', params.get('editSection')]);
+
+    let editSection = params.get('editSection');
+    //params.set('editSection', 'representante');
     if (isEdit) {
-      params.set('editSection', 'all');
+
+      editSection = editSection === 'all'? 'empresa':'none';
+
+      params.set('editSection', editSection);
+
+      
       //params.set('otro', '50');
     } else {
+
+      editSection = editSection === 'empresa'? 'all':'representante';
       //params.delete('editSection');
+      params.set('editSection', editSection);
       params.delete('otro');
     }
+
+    console.log(['editSectionX->', params.get('editSection')]);
+
     replace(`${pathname}?${params.toString()}`);
 
 
