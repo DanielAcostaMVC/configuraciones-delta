@@ -6,7 +6,7 @@ import { Stack } from '@mui/material';
 
 import { FormRepresentanteLegal, ViewRepresentanteLegal } from '../../ui/empresa/representante-legal/index';
 import { FormDatosEmpresa, ViewDatosEmpresa } from '../../ui/empresa/datos-empresa/index';
-import { CardFirma } from '../../ui/empresa/firma';
+import { CardFirma } from '../../ui/empresa/card-firma';
 
 import { CardCustom } from '../../ui/card-custom';
 

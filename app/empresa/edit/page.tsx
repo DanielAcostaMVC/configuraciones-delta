@@ -9,7 +9,7 @@ import { FormDatosEmpresa } from '@/app/ui/empresa/datos-empresa/index';
 import { CardCustom } from '../../ui/card-custom';
 
 //import { UIContext } from '../../../context/ui';
-import { CardFirma } from '../../ui/empresa/firma';
+import { CardFirma } from '../../ui/empresa/card-firma';
 
 import { RepresentanteLegal } from '../../lib/empresa/definitions';
 
