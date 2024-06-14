@@ -22,7 +22,8 @@ interface DatosEmpresaProps {
   Ciudad: Ciudad;
   Poliza: Poliza;
 }
-export const DatosEmpresa: FC<DatosEmpresaProps> = ({
+
+export const CardDatosEmpresa: FC<DatosEmpresaProps> = ({
   isEdit,
   Direccion,
   ConstitucionEmpresa = '',
