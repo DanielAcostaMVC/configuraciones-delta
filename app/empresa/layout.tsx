@@ -13,13 +13,30 @@ import { UIProvider } from '@/app/context/ui/provider'
 import { ThemeProvider } from '@mui/material/styles';
 import { SincoTheme, PageHeader } from '@sinco/react';
 
+import { FooterActions } from '@/app/ui/footer-actions';
+
 import {
   BoxCustomView, 
  /* EmptyStateError,
   EmptyStateSearch,*/
 } from '@/app/ui/box-custom-view';
 
+import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+
 export default function LayoutEmpresa  ({ children }: { children: React.ReactNode })  {
+
+  
+
+  const searchParams = useSearchParams();
+
+  const params = new URLSearchParams(searchParams);
+
+  let editSection = params.get('editSection');
+
+  console.log('editSection', editSection);
+
+  const isActiveFooter = editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
+
   return (
     <ThemeProvider theme={SincoTheme}>
     <UIProvider>
@@ -44,7 +61,7 @@ export default function LayoutEmpresa  ({ children }: { children: React.ReactNod
           </Grid>
         </Grid>
       </Container>
-      {/*isActiveFooter && <FooterActions />*/}
+      {isActiveFooter && <FooterActions />}
     </BoxCustomView>
     </UIProvider>
     </ThemeProvider>
