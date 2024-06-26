@@ -4,6 +4,7 @@ import { Stack } from '@mui/material';
 import { BoxCustomScroll }from '@/app/ui/box-custom.style';
 import EditarCerrarTodo from '@/app/ui/editar-cerrar-todo';
 import { CardRepresentanteLegal, CardFirma, CardDatosEmpresa } from '@/app/ui/empresa/index';
+import { Suspense } from 'react';
 
 export default async function EmpresaPage({
   searchParams,
@@ -22,7 +23,9 @@ export default async function EmpresaPage({
     return (
             <BoxCustomScroll>
               <Stack gap={1.5}>
+                <Suspense fallback={<div>Loading...</div>}>
                   <EditarCerrarTodo isEdit={searchParams?.editSection==='all'} />
+                </Suspense>
                   <CardRepresentanteLegal isEdit={searchParams?.editSection==='all' || searchParams?.editSection==='representante'} Representante={RepresentanteLegal} />
                   <CardFirma Firma={RepresentanteLegal.Firma} />
                   <CardDatosEmpresa
