@@ -22,7 +22,7 @@ export default async function EmpresaPage({
     return (
             <BoxCustomScroll>
               <Stack gap={1.5}>
-                  <EditarCerrarTodo isEdit={searchParams?.editSection==='all'} />
+                  {/*<EditarCerrarTodo isEdit={searchParams?.editSection==='all'} />*/}
                   <CardRepresentanteLegal isEdit={searchParams?.editSection==='all' || searchParams?.editSection==='representante'} Representante={RepresentanteLegal} />
                   <CardFirma Firma={RepresentanteLegal.Firma} />
                   <CardDatosEmpresa
