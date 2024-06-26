@@ -61,7 +61,7 @@ export default function LayoutEmpresa  ({ children }: { children: React.ReactNod
           </Grid>
         </Grid>
       </Container>
-      {isActiveFooter && <FooterActions />}
+      {/*isActiveFooter && <FooterActions />*/}
     </BoxCustomView>
     </UIProvider>
     </ThemeProvider>
