@@ -26,16 +26,18 @@ import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 export default function LayoutEmpresa  ({ children }: { children: React.ReactNode;  })  {
 
 
-/*
+
   const searchParams = useSearchParams();
 
   const params = new URLSearchParams(searchParams);
 
   let editSection = params.get('editSection');
 
-  console.log('editSection', editSection);
-*/
-  const isActiveFooter = true;//editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
+  const isActiveFooter = editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
+
+  console.log('editSection-layout', editSection);
+
+  
 
   return (
     <ThemeProvider theme={SincoTheme}>
@@ -61,7 +63,7 @@ export default function LayoutEmpresa  ({ children }: { children: React.ReactNod
           </Grid>
         </Grid>
       </Container>
-      isActiveFooter && <FooterActions />
+      {isActiveFooter && <FooterActions />}
     </BoxCustomView>
     </UIProvider>
     </ThemeProvider>
