@@ -22,7 +22,7 @@ import {
 
 //import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
-import { isActiveFooterX } from '@/app/lib/empresa/isActiveFooter'; //'/lib/empresa/isActiveFooter';
+import { IsActiveFooterX } from '@/app/lib/empresa/isActiveFooter'; //'/lib/empresa/isActiveFooter';
 
 export default function LayoutEmpresa  ({ children }: { children: React.ReactNode;  })  {
 
@@ -34,7 +34,7 @@ export default function LayoutEmpresa  ({ children }: { children: React.ReactNod
 
   let editSection = params.get('editSection');*/
 
-  const isActiveFooter = isActiveFooterX(); //editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
+  const isActiveFooter = IsActiveFooterX(); //editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
 
   //console.log('editSection-layout', editSection);
   console.log('isActiveFooter-layout', isActiveFooter);

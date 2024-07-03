@@ -2,7 +2,7 @@
 
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
-export const isActiveFooterX = () => {
+export const IsActiveFooterX = () => {
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
   let editSection = params.get('editSection');
