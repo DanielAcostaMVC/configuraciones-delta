@@ -12,7 +12,7 @@ import { UIProvider } from '@/app/context/ui/provider'
 import { ThemeProvider } from '@mui/material/styles';
 import { SincoTheme, PageHeader } from '@sinco/react';
 
-import { FooterActions } from '@/app/ui/footer-actions';
+import { Footer } from '@/app/ui/footer';
 
 import {
   BoxCustomView, 
@@ -20,9 +20,11 @@ import {
   EmptyStateSearch,*/
 } from '@/app/ui/box-custom-view';
 
+import { Suspense } from 'react'
+
 //import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
-import { IsActiveFooterX } from '@/app/lib/empresa/isActiveFooter'; //'/lib/empresa/isActiveFooter';
+//import { IsActiveFooterX } from '@/app/lib/empresa/isActiveFooter'; //'/lib/empresa/isActiveFooter';
 
 export default function LayoutEmpresa  ({ children }: { children: React.ReactNode;  })  {
 
@@ -34,10 +36,10 @@ export default function LayoutEmpresa  ({ children }: { children: React.ReactNod
 
   let editSection = params.get('editSection');*/
 
-  const isActiveFooter = IsActiveFooterX(); //editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
+  //const isActiveFooter = IsActiveFooterX(); //editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
 
   //console.log('editSection-layout', editSection);
-  console.log('isActiveFooter-layout', isActiveFooter);
+  //console.log('isActiveFooter-layout', isActiveFooter);
 
   
 
@@ -65,7 +67,9 @@ export default function LayoutEmpresa  ({ children }: { children: React.ReactNod
           </Grid>
         </Grid>
       </Container>
-      {isActiveFooter && <FooterActions />}
+      <Suspense>
+        <Footer />
+      </Suspense>
     </BoxCustomView>
     </UIProvider>
     </ThemeProvider>
