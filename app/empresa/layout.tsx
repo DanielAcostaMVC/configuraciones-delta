@@ -1,5 +1,4 @@
-'use client';
-
+'use client'
 import { Container, Grid } from '@mui/material';
 import Link from 'next/link';
 import {
@@ -21,21 +20,24 @@ import {
   EmptyStateSearch,*/
 } from '@/app/ui/box-custom-view';
 
-import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+//import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+
+import { isActiveFooterX } from '@/app/lib/empresa/isActiveFooter'; //'/lib/empresa/isActiveFooter';
 
 export default function LayoutEmpresa  ({ children }: { children: React.ReactNode;  })  {
 
 
-
+/*
   const searchParams = useSearchParams();
 
   const params = new URLSearchParams(searchParams);
 
-  let editSection = params.get('editSection');
+  let editSection = params.get('editSection');*/
 
-  const isActiveFooter = editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
+  const isActiveFooter = isActiveFooterX(); //editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
 
-  console.log('editSection-layout', editSection);
+  //console.log('editSection-layout', editSection);
+  console.log('isActiveFooter-layout', isActiveFooter);
 
   
 
