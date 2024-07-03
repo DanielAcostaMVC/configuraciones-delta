@@ -22,25 +22,8 @@ import {
 
 import { Suspense } from 'react'
 
-//import { useSearchParams, usePathname, useRouter } from 'next/navigation';
-
 
 export default function LayoutEmpresa  ({ children }: { children: React.ReactNode;  })  {
-
-
-/*
-  const searchParams = useSearchParams();
-
-  const params = new URLSearchParams(searchParams);
-
-  let editSection = params.get('editSection');*/
-
-  //const isActiveFooter = editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
-
-  //console.log('editSection-layout', editSection);
-  //console.log('isActiveFooter-layout', isActiveFooter);
-
-  
 
   return (
     <ThemeProvider theme={SincoTheme}>

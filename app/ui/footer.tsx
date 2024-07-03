@@ -1,7 +1,7 @@
 'use client'
 
 import { FooterActions } from '@/app/ui/footer-actions';
-import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 
 export const Footer = () => {
 
@@ -9,7 +9,6 @@ export const Footer = () => {
     const params = new URLSearchParams(searchParams);
     let editSection = params.get('editSection');
     const isActiveFooter = editSection === 'all' || editSection === 'empresa' || editSection === 'representante';
-    console.log('editSection-layoutFun', editSection);
     
     return (
         <>
